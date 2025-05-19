@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQs - Bubble Cosmetics</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/modal-styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/wishlist-styles.css">
+  <style>
+    .faq-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .faq-item {
+      margin-bottom: 1rem;
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius);
+      overflow: hidden;
+      background-color: var(--white);
+    }
+    
+    .faq-question {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.25rem;
+      cursor: pointer;
+    }
+    
+    .faq-question h3 {
+      font-size: 1.125rem;
+      font-weight: 500;
+      color: var(--text-dark);
+      margin: 0;
+    }
+    
+    .faq-toggle {
+      color: var(--text-light);
+      transition: transform 0.3s ease;
+    }
+    
+    .faq-item.active .faq-toggle {
+      transform: rotate(45deg);
+    }
+    
+    .faq-answer {
+      padding: 0 1.25rem;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease, padding 0.3s ease;
+    }
+    
+    .faq-item.active .faq-answer {
+      max-height: 20rem;
+      padding: 0 1.25rem 1.25rem;
+    }
+    
+    .faq-answer p {
+      color: var(--text-light);
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <div class="mobile-menu-btn" id="mobile-menu-toggle">
+          <i class="fas fa-bars"></i>
+        </div>
+        
+        <div class="logo">
+          <a href="index.html">
+            <img src="images/logo/bubble-cosmetics-logo.png" alt="Bubble Cosmetics Logo" class="logo-img">
+            <span class="logo-text">Bubble<span class="pink">Cosmetics</span></span>
+          </a>
+        </div>
+        
+        <nav class="main-nav" id="main-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        
+        <div class="header-icons">
+          <a href="#" class="icon-btn" id="search-toggle"><i class="fas fa-search"></i></a>
+          <a href="#" class="icon-btn"><i class="fas fa-user"></i></a>
+          <a href="#" class="icon-btn" id="wishlist-icon"><i class="fas fa-heart"></i></a>
+          <a href="#" class="icon-btn cart-icon" id="cart-icon">
+            <i class="fas fa-shopping-bag"></i>
+            <span class="cart-count">0</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation -->
+  <div class="mobile-nav" id="mobile-nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- Search Overlay -->
+  <div class="search-overlay" id="search-overlay">
+    <div class="search-container">
+      <form class="search-form">
+        <input type="text" placeholder="Search for products..." id="search-input">
+        <button type="submit"><i class="fas fa-search"></i></button>
+      </form>
+      <button class="close-search" id="close-search"><i class="fas fa-times"></i></button>
+    </div>
+  </div>
+
+  <!-- Cart Sidebar -->
+  <div class="cart-sidebar" id="cart-sidebar">
+    <div class="cart-header">
+      <h3>Your Cart</h3>
+      <button class="close-cart" id="close-cart"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="cart-items" id="cart-items">
+      <!-- Cart items will be dynamically added here -->
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total:</span>
+        <span id="cart-total">$0.00</span>
+      </div>
+      <button class="btn btn-primary btn-full">Checkout</button>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero hero-small">
+    <div class="hero-bg">
+      <div class="bubble bubble-1"></div>
+      <div class="bubble bubble-2"></div>
+      <div class="bubble bubble-3"></div>
+    </div>
+    <div class="container">
+      <div class="hero-content fade-in">
+        <h1>Frequently Asked <span class="pink">Questions</span></h1>
+        <p>Find answers to the most common questions about our products and services.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section">
+    <div class="container">
+      <div class="faq-container">
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Are your products cruelty-free?</h3>
+            <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+          </div>
+          <div class="faq-answer">
+            <p>Yes, all Bubble Cosmetics products are 100% cruelty-free. We never test on animals and we don't work with suppliers who test on animals. We're proud to be certified by Leaping Bunny and PETA.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Do you ship internationally?</h3>
+            <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+          </div>
+          <div class="faq-answer">
+            <p>Yes, we ship to most countries worldwide. International shipping typically takes 7-14 business days, depending on your location and customs processing. You can see the exact shipping options and costs at checkout.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>What is your return policy?</h3>
+            <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+          </div>
+          <div class="faq-answer">
+            <p>We accept returns within 30 days of purchase for unused and unopened products in their original packaging. For hygiene reasons, we cannot accept returns of opened cosmetic products unless they are defective. Please visit our Shipping & Returns page for more details.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Are your products suitable for sensitive skin?</h3>
+            <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+          </div>
+          <div class="faq-answer">
+            <p>Many of our products are formulated to be gentle and suitable for sensitive skin. We clearly label all ingredients and potential allergens. If you have specific concerns, we recommend checking the ingredients list or contacting our customer service team for advice.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Do you offer samples?</h3>
+            <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+          </div>
+          <div class="faq-answer">
+            <p>Yes! We offer sample sizes of many of our products. You can purchase sample sets on our website, and we also include free samples with orders over $50.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>How can I track my order?</h3>
+            <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+          </div>
+          <div class="faq-answer">
+            <p>Once your order ships, you'll receive a confirmation email with a tracking number. You can use this number to track your package on our website or directly through the carrier's website.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Do you have physical stores?</h3>
+            <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+          </div>
+          <div class="faq-answer">
+            <p>Yes, we currently have flagship stores in Manila, Cebu, and Davao. We also have pop-up shops in various locations throughout the year. Check our website or social media for the latest information on store locations and events.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Are your products vegan?</h3>
+            <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+          </div>
+          <div class="faq-answer">
+            <p>Many of our products are vegan, but not all. We clearly label which products are vegan on our website and packaging. We're continuously working to expand our vegan offerings.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>How do I become a Bubble Beauty Ambassador?</h3>
+            <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+          </div>
+          <div class="faq-answer">
+            <p>We're always looking for passionate individuals to join our Beauty Ambassador program! You can apply through the "Careers" section of our website. We select ambassadors based on their enthusiasm for our brand, social media presence, and alignment with our values.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Do you offer gift wrapping?</h3>
+            <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+          </div>
+          <div class="faq-answer">
+            <p>Yes, we offer gift wrapping services for a small additional fee. You can select this option during checkout. We also offer gift cards if you're not sure which products to choose.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="newsletter">
+    <div class="container">
+      <div class="newsletter-content">
+        <h2>Join Our Bubble Family</h2>
+        <p>Subscribe to our newsletter for exclusive offers, tutorials, and beauty tips.</p>
+        
+        <form class="newsletter-form" id="newsletter-form">
+          <input type="email" placeholder="Your email address" required id="newsletter-email">
+          <button type="submit" class="btn btn-accent">Subscribe</button>
+        </form>
+        
+        <div class="newsletter-success" id="newsletter-success">
+          <i class="fas fa-check-circle"></i>
+          <p>Thank you for subscribing to our newsletter!</p>
+        </div>
+        
+        <p class="newsletter-terms">
+          By subscribing, you agree to our <a href="#" class="privacy-policy-link">Privacy Policy</a> and consent to receive updates from our company.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3>Bubble Cosmetics</h3>
+          <p>Joyful, cute, and energetic makeup for everyone.</p>
+          <div class="social-links">
+            <a href="https://instagram.com" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://facebook.com" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h3>Shop</h3>
+          <ul>
+            <li><a href="products.html">All Products</a></li>
+            <li><a href="products.html?category=bestsellers">Bestsellers</a></li>
+            <li><a href="products.html?category=new">New Arrivals</a></li>
+            <li><a href="products.html?category=offers">Special Offers</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="press.html">Press</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Customer Service</h3>
+          <ul>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="faqs.html">FAQs</a></li>
+            <li><a href="shipping-returns.html">Shipping & Returns</a></li>
+            <li><a href="#" class="privacy-policy-link">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year"></span> Bubble Cosmetics. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Privacy Policy Modal -->
+  <div id="privacy-policy-modal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Privacy Policy</h2>
+        <span class="close-modal">&times;</span>
+      </div>
+      <div class="modal-body">
+        <p class="modal-date">Last updated: May 19, 2025</p>
+        
+        <section class="policy-section">
+          <h3>1. Introduction</h3>
+          <p>
+            At Bubble Cosmetics, we respect your privacy and are committed to protecting your personal data. This
+            privacy policy will inform you about how we look after your personal data when you visit our website and
+            tell you about your privacy rights and how the law protects you.
+          </p>
+        </section>
+
+        <section class="policy-section">
+          <h3>2. The Data We Collect About You</h3>
+          <p>
+            Personal data means any information about an individual from which that person can be identified. We may
+            collect, use, store and transfer different kinds of personal data about you which we have grouped together
+            as follows:
+          </p>
+          <ul>
+            <li>Identity Data includes first name, last name, username or similar identifier.</li>
+            <li>Contact Data includes billing address, delivery address, email address and telephone numbers.</li>
+            <li>Financial Data includes payment card details.</li>
+            <li>Transaction Data includes details about payments to and from you and other details of products you have
+              purchased from us.</li>
+            <li>Technical Data includes internet protocol (IP) address, your login data, browser type and version.</li>
+            <li>Profile Data includes your username and password, purchases or orders made by you, your preferences.</li>
+            <li>Usage Data includes information about how you use our website and products.</li>
+            <li>Marketing and Communications Data includes your preferences in receiving marketing from us.</li>
+          </ul>
+        </section>
+
+        <section class="policy-section">
+          <h3>3. How We Use Your Personal Data</h3>
+          <p>
+            We will only use your personal data when the law allows us to. Most commonly, we will use your personal
+            data in the following circumstances:
+          </p>
+          <ul>
+            <li>Where we need to perform the contract we are about to enter into or have entered into with you.</li>
+            <li>Where it is necessary for our legitimate interests and your interests and fundamental rights do not
+              override those interests.</li>
+            <li>Where we need to comply with a legal or regulatory obligation.</li>
+          </ul>
+        </section>
+
+        <section class="policy-section">
+          <h3>4. Data Security</h3>
+          <p>
+            We have put in place appropriate security measures to prevent your personal data from being accidentally
+            lost, used or accessed in an unauthorized way, altered or disclosed. In addition, we limit access to your
+            personal data to those employees, agents, contractors and other third parties who have a business need to
+            know.
+          </p>
+        </section>
+
+        <section class="policy-section">
+          <h3>5. Your Legal Rights</h3>
+          <p>
+            Under certain circumstances, you have rights under data protection laws in relation to your personal data,
+            including:
+          </p>
+          <ul>
+            <li>Request access to your personal data.</li>
+            <li>Request correction of your personal data.</li>
+            <li>Request erasure of your personal data.</li>
+            <li>Object to processing of your personal data.</li>
+            <li>Request restriction of processing your personal data.</li>
+            <li>Request transfer of your personal data.</li>
+            <li>Right to withdraw consent.</li>
+          </ul>
+        </section>
+
+        <section class="policy-section">
+          <h3>6. Contact Us</h3>
+          <p>If you have any questions about this privacy policy or our privacy practices, please contact us at:</p>
+          <p>
+            <strong>Email:</strong> privacy@bubblecosmetics.com<br>
+            <strong>Phone:</strong> +1 (555) 123-4567<br>
+            <strong>Address:</strong> 123 Bubble Street, Makati City, Philippines
+          </p>
+        </section>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary" id="close-privacy-policy">I Understand</button>
+      </div>
+    </div>
+  </div>
+
+  <button class="go-to-top-float" id="goToTopFloatBtn" aria-label="Go to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="js/script.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/footer.js"></script>
+  <script>
+    // FAQ accordion functionality
+    document.addEventListener("DOMContentLoaded", function() {
+      const faqItems = document.querySelectorAll(".faq-item");
+      
+      faqItems.forEach(item => {
+        const question = item.querySelector(".faq-question");
+        
+        question.addEventListener("click", () => {
+          // Close all other items
+          faqItems.forEach(otherItem => {
+            if (otherItem !== item && otherItem.classList.contains("active")) {
+              otherItem.classList.remove("active");
+            }
+          });
+          
+          // Toggle current item
+          item.classList.toggle("active");
+        });
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+/* Hero Video Background */
+.hero {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .hero-video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+  }
+  
+  .hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translateX(-50%) translateY(-50%);
+    object-fit: cover;
+  }
+  
+  .video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+  }
+  
+  .hero .container {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .hero .hero-bg {
+    z-index: 0;
+    opacity: 0.5;
+  }
+  
+  /* Featured Video Section */
+  .featured-video {
+    padding: 80px 0;
+    background-color: #f9f9ff;
+  }
+  
+  .video-container {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  .video-container video {
+    width: 100%;
+    display: block;
+    border-radius: 12px;
+  }
+  
+  /* Video Play Button for Custom Thumbnail */
+  .video-play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 2;
+  }
+  
+  .video-play-button i {
+    color: #ff6b98;
+    font-size: 30px;
+    margin-left: 5px; /* Offset slightly to center the triangle icon */
+  }
+  
+  .video-play-button:hover {
+    background-color: #fff;
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+  
+  @media (max-width: 768px) {
+    .video-play-button {
+      width: 60px;
+      height: 60px;
+    }
+  
+    .video-play-button i {
+      font-size: 24px;
+    }
+  
+    .featured-video {
+      padding: 50px 0;
+    }
+  }
+  
+  /* YouTube Embed Alternative */
+  .youtube-embed {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+  }
+  
+  .youtube-embed iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+  }
+  

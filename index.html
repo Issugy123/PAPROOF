@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bubble Cosmetics - Joyful Makeup for Everyone</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/product-styles.css">
+  <link rel="stylesheet" href="css/video-styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/modal-styles.css">
+  <link rel="stylesheet" href="css/blog-image-styles.css">
+  <link rel="stylesheet" href="css/blog-styles.css">  
+</head>
+<body>
+<!-- Header -->
+<header class="header">
+  <div class="container">
+    <div class="header-content">
+      <div class="mobile-menu-btn" id="mobile-menu-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+      
+      <div class="logo">
+        <a href="index.html">
+          <img src="images/logo/bubble-cosmetics-logo.png" alt="Bubble Cosmetics Logo" class="logo-img">
+          <span class="logo-text">Bubble<span class="pink">Cosmetics</span></span>
+        </a>
+      </div>
+      
+      <nav class="main-nav" id="main-nav">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      
+      <div class="header-icons">
+        <a href="#" class="icon-btn" id="search-toggle"><i class="fas fa-search"></i></a>
+        <a href="#" class="icon-btn"><i class="fas fa-user"></i></a>
+        <a href="#" class="icon-btn" id="wishlist-icon"><i class="fas fa-heart"></i></a>
+        <a href="#" class="icon-btn cart-icon" id="cart-icon">
+          <i class="fas fa-shopping-bag"></i>
+          <span class="cart-count">0</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile Navigation -->
+<div class="mobile-nav" id="mobile-nav">
+  <ul>
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="products.html">Products</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</div>
+
+<!-- Search Overlay -->
+<div class="search-overlay" id="search-overlay">
+  <div class="search-container">
+    <form class="search-form">
+      <input type="text" placeholder="Search for products..." id="search-input">
+      <button type="submit"><i class="fas fa-search"></i></button>
+    </form>
+    <button class="close-search" id="close-search"><i class="fas fa-times"></i></button>
+  </div>
+</div>
+
+<!-- Cart Sidebar -->
+<div class="cart-sidebar" id="cart-sidebar">
+  <div class="cart-header">
+    <h3>Your Cart</h3>
+    <button class="close-cart" id="close-cart"><i class="fas fa-times"></i></button>
+  </div>
+  <div class="cart-items" id="cart-items">
+    <!-- Cart items will be dynamically added here -->
+  </div>
+  <div class="cart-footer">
+    <div class="cart-total">
+      <span>Total:</span>
+      <span id="cart-total">₱0.00</span>
+    </div>
+    <button class="btn btn-primary btn-full">Checkout</button>
+  </div>
+</div>
+
+<!-- Hero Section with Video Background -->
+<section class="hero">
+  <div class="hero-video-container">
+    <video autoplay muted loop playsinline class="hero-video">
+      <source src="videos/bubble-cosmetics-intro.mp4" type="video/mp4">
+      <!-- Fallback for browsers that don't support video -->
+    </video>
+    <div class="video-overlay"></div>
+    <!-- Keep the bubbles as a fallback/additional effect -->
+    <div class="hero-bg">
+      <div class="bubble bubble-1"></div>
+      <div class="bubble bubble-2"></div>
+      <div class="bubble bubble-3"></div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="hero-content fade-in">
+      <h1>Make Yourself <span class="pink">Glow</span> Like a <span class="pink">Bubble</span></h1>
+      <p>Joyful, cute, and energetic makeup for everyone. Express yourself with our playful cosmetics!</p>
+      <div class="hero-buttons">
+        <a href="products.html" class="btn btn-primary">
+          Shop Now
+          <i class="fas fa-shopping-bag"></i>
+        </a>
+        <a href="about.html" class="btn btn-outline">
+          Learn More
+          <i class="fas fa-chevron-right"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Featured Products -->
+<section class="featured-products">
+  <div class="container">
+    <div class="section-header">
+      <h2>Our Bestsellers</h2>
+      <p>Discover our most loved products that bring joy and confidence to your everyday look.</p>
+    </div>
+    
+    <div class="product-grid" id="featured-products">
+      <!-- Products will be dynamically loaded here via JavaScript -->
+    </div>
+
+    <div class="view-all">
+      <a href="products.html" class="btn btn-outline">
+        View All Products
+        <i class="fas fa-chevron-right"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Latest Blog Posts -->
+<section class="latest-blog-posts">
+  <div class="container">
+    <div class="section-header">
+      <h2>Latest from Our Blog</h2>
+      <p>Stay updated with beauty tips, product launches, and company news</p>
+    </div>
+    
+    <div class="blog-preview-grid">
+      <!-- Blog Post 1 -->
+      <div class="blog-preview-card">
+        <div class="blog-preview-image">
+          <img src="images/blog/flagship-store.jpg" alt="Bubble Cosmetics Opens New Flagship Store in Manila">
+          <div class="blog-preview-tag">Company News</div>
+        </div>
+        <div class="blog-preview-content">
+          <div class="post-meta">
+            <span class="post-date"><i class="far fa-calendar"></i> May 15, 2025</span>
+          </div>
+          <h3>Bubble Cosmetics Opens New Flagship Store in Manila</h3>
+          <p>We're thrilled to announce the grand opening of our first flagship store in the heart of Manila!</p>
+          <a href="blog-post-flagship-store.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- Blog Post 2 -->
+      <div class="blog-preview-card">
+        <div class="blog-preview-image">
+          <img src="images/blog/summer-skincare.jpg" alt="5 Essential Summer Skincare Tips for Filipino Skin">
+          <div class="blog-preview-tag">Beauty Tips</div>
+        </div>
+        <div class="blog-preview-content">
+          <div class="post-meta">
+            <span class="post-date"><i class="far fa-calendar"></i> May 10, 2025</span>
+          </div>
+          <h3>5 Essential Summer Skincare Tips for Filipino Skin</h3>
+          <p>Protect and nourish your skin during the hot Philippine summer with these expert-approved skincare tips.</p>
+          <a href="blog-post-summer-skincare.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- Blog Post 3 -->
+      <div class="blog-preview-card">
+        <div class="blog-preview-image">
+          <img src="images/blog/bubble-glow.jpg" alt="Introducing Bubble Glow: Our New Skincare Line">
+          <div class="blog-preview-tag">Product Launches</div>
+        </div>
+        <div class="blog-preview-content">
+          <div class="post-meta">
+            <span class="post-date"><i class="far fa-calendar"></i> May 5, 2025</span>
+          </div>
+          <h3>Introducing Bubble Glow: Our New Skincare Line</h3>
+          <p>We're excited to announce our latest innovation in skincare, specially formulated for Filipino skin.</p>
+          <a href="blog-post-bubble-glow.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="view-all">
+      <a href="blog.html" class="btn btn-outline">
+        View All Articles
+        <i class="fas fa-chevron-right"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- About Section -->
+<section class="about-section">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-content slide-in-left">
+        <h2>Our Bubble Philosophy</h2>
+        <p>
+          At Bubble Cosmetics, we believe makeup should be fun, expressive, and for everyone. 
+          Our products are designed to bring joy and confidence to your everyday routine.
+        </p>
+        <ul class="about-features">
+          <li>
+            <span class="feature-icon"><i class="fas fa-check"></i></span>
+            <span class="feature-text">Cruelty-free formulas</span>
+          </li>
+          <li>
+            <span class="feature-icon"><i class="fas fa-check"></i></span>
+            <span class="feature-text">Vibrant, playful colors</span>
+          </li>
+          <li>
+            <span class="feature-icon"><i class="fas fa-check"></i></span>
+            <span class="feature-text">Suitable for all skin types</span>
+          </li>
+          <li>
+            <span class="feature-icon"><i class="fas fa-check"></i></span>
+            <span class="feature-text">Environmentally conscious packaging</span>
+          </li>
+        </ul>
+        <a href="about.html" class="btn btn-primary">Learn More About Us</a>
+      </div>
+      <div class="about-image slide-in-right">
+        <img src="images/about/philosophy.jpg" alt="Bubble Cosmetics Philosophy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="testimonials">
+  <div class="container">
+    <div class="section-header">
+      <h2>What Our Customers Say</h2>
+      <p>Real experiences from our bubble community.</p>
+    </div>
+    
+    <div class="testimonial-grid">
+      <div class="testimonial-card" data-aos="fade-up">
+        <div class="testimonial-rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <p class="testimonial-text">"I'm obsessed with the Bubble Glow Highlighter! It gives me the perfect dewy look without being too glittery."</p>
+        <div class="testimonial-author">
+          <img src="images/testimonials/sarah.jpg" alt="Sarah Reyes">
+          <div class="author-info">
+            <h4>Sarah Reyes</h4>
+            <p>Manila, Philippines</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="testimonial-rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <p class="testimonial-text">"The Curl Beam Cream is a game-changer. It's gives my hair so much volume, I like it."</p>
+        <div class="testimonial-author">
+          <img src="images/testimonials/miguel.jpg" alt="Miguel Santos">
+          <div class="author-info">
+            <h4>Miguel Santos</h4>
+            <p>Cebu City, Philippines</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="testimonial-rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <p class="testimonial-text">"Bubble Cosmetics has the cutest packaging and the products actually work! The Dreamy Lip Gloss is my everyday essential."</p>
+        <div class="testimonial-author">
+          <img src="images/testimonials/emma.jpg" alt="Emma Rodriguez">
+          <div class="author-info">
+            <h4>Emma Rodriguez</h4>
+            <p>Davao City, Philippines</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Newsletter -->
+<section class="newsletter">
+  <div class="container">
+    <div class="newsletter-content">
+      <h2>Join Our Bubble Family</h2>
+      <p>Subscribe to our newsletter for exclusive offers, tutorials, and beauty tips.</p>
+      
+      <form class="newsletter-form" id="newsletter-form">
+        <input type="email" placeholder="Your email address" required id="newsletter-email">
+        <button type="submit" class="btn btn-accent">Subscribe</button>
+      </form>
+      
+      <div class="newsletter-success" id="newsletter-success">
+        <i class="fas fa-check-circle"></i>
+        <p>Thank you for subscribing to our newsletter!</p>
+      </div>
+      
+      <p class="newsletter-terms">
+        By subscribing, you agree to our Privacy Policy and consent to receive updates from our company.
+      </p>
+    </div>
+  </div>
+</section>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3>Bubble Cosmetics</h3>
+          <p>Joyful, cute, and energetic makeup for everyone.</p>
+          <div class="social-links">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h3>Shop</h3>
+          <ul>
+            <li><a href="products.html">All Products</a></li>
+            <li><a href="products.html?category=bestsellers">Bestsellers</a></li>
+            <li><a href="products.html?category=new">New Arrivals</a></li>
+            <li><a href="products.html?category=offers">Special Offers</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="press.html">Press</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h3>Customer Service</h3>
+          <ul>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="faqs.html">FAQs</a></li>
+            <li><a href="shipping-returns.html">Shipping & Returns</a></li>
+            <li><a href="#" class="privacy-policy-link">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year"></span> Bubble Cosmetics. All rights reserved.</p>
+        <p class="footer-address">123 Bubble Street, Makati City, Philippines</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Privacy Policy Modal -->
+  <div id="privacy-policy-modal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Privacy Policy</h2>
+        <span class="close-modal">&times;</span>
+      </div>
+      <div class="modal-body">
+        <p class="modal-date">Last updated: May 19, 2025</p>
+        
+        <section class="policy-section">
+          <h3>1. Introduction</h3>
+          <p>
+            At Bubble Cosmetics, we respect your privacy and are committed to protecting your personal data. This
+            privacy policy will inform you about how we look after your personal data when you visit our website and
+            tell you about your privacy rights and how the law protects you.
+          </p>
+        </section>
+
+        <section class="policy-section">
+          <h3>2. The Data We Collect About You</h3>
+          <p>
+            Personal data means any information about an individual from which that person can be identified. We may
+            collect, use, store and transfer different kinds of personal data about you which we have grouped together
+            as follows:
+          </p>
+          <ul>
+            <li>Identity Data includes first name, last name, username or similar identifier.</li>
+            <li>Contact Data includes billing address, delivery address, email address and telephone numbers.</li>
+            <li>Financial Data includes payment card details.</li>
+            <li>Transaction Data includes details about payments to and from you and other details of products you have
+              purchased from us.</li>
+            <li>Technical Data includes internet protocol (IP) address, your login data, browser type and version.</li>
+            <li>Profile Data includes your username and password, purchases or orders made by you, your preferences.</li>
+            <li>Usage Data includes information about how you use our website and products.</li>
+            <li>Marketing and Communications Data includes your preferences in receiving marketing from us.</li>
+          </ul>
+        </section>
+
+        <section class="policy-section">
+          <h3>3. How We Use Your Personal Data</h3>
+          <p>
+            We will only use your personal data when the law allows us to. Most commonly, we will use your personal
+            data in the following circumstances:
+          </p>
+          <ul>
+            <li>Where we need to perform the contract we are about to enter into or have entered into with you.</li>
+            <li>Where it is necessary for our legitimate interests and your interests and fundamental rights do not
+              override those interests.</li>
+            <li>Where we need to comply with a legal or regulatory obligation.</li>
+          </ul>
+        </section>
+
+        <section class="policy-section">
+          <h3>4. Data Security</h3>
+          <p>
+            We have put in place appropriate security measures to prevent your personal data from being accidentally
+            lost, used or accessed in an unauthorized way, altered or disclosed. In addition, we limit access to your
+            personal data to those employees, agents, contractors and other third parties who have a business need to
+            know.
+          </p>
+        </section>
+
+        <section class="policy-section">
+          <h3>5. Your Legal Rights</h3>
+          <p>
+            Under certain circumstances, you have rights under data protection laws in relation to your personal data,
+            including:
+          </p>
+          <ul>
+            <li>Request access to your personal data.</li>
+            <li>Request correction of your personal data.</li>
+            <li>Request erasure of your personal data.</li>
+            <li>Object to processing of your personal data.</li>
+            <li>Request restriction of processing your personal data.</li>
+            <li>Request transfer of your personal data.</li>
+            <li>Right to withdraw consent.</li>
+          </ul>
+        </section>
+
+        <section class="policy-section">
+          <h3>6. Contact Us</h3>
+          <p>If you have any questions about this privacy policy or our privacy practices, please contact us at:</p>
+          <p>
+            <strong>Email:</strong> privacy@bubblecosmetics.com<br>
+            <strong>Phone:</strong> +63 (2) 8123-4567<br>
+            <strong>Address:</strong> 123 Bubble Street, Makati City, Philippines
+          </p>
+        </section>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary" id="close-privacy-policy">I Understand</button>
+      </div>
+    </div>
+  </div>
+
+<button class="go-to-top-float" id="goToTopFloatBtn" aria-label="Go to top">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+<script src="js/script.js"></script>
+<script src="js/products.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/footer.js"></script>
+<script src="js/video.js"></script>
+</body>
+</html>

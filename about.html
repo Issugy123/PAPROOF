@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us - Bubble Cosmetics</title>
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/modal-styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/wishlist-styles.css">
+</head>
+<body>
+<!-- Header -->
+<!-- Header -->
+<header class="header">
+<div class="container">
+  <div class="header-content">
+    <div class="mobile-menu-btn" id="mobile-menu-toggle">
+      <i class="fas fa-bars"></i>
+    </div>
+    
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/logo/bubble-cosmetics-logo.png" alt="Bubble Cosmetics Logo" class="logo-img">
+        <span class="logo-text">Bubble<span class="pink">Cosmetics</span></span>
+      </a>
+    </div>
+    
+    <nav class="main-nav" id="main-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    
+    <div class="header-icons">
+      <a href="#" class="icon-btn" id="search-toggle"><i class="fas fa-search"></i></a>
+      <a href="#" class="icon-btn"><i class="fas fa-user"></i></a>
+      <a href="#" class="icon-btn" id="wishlist-icon"><i class="fas fa-heart"></i></a>
+      <a href="#" class="icon-btn cart-icon" id="cart-icon">
+        <i class="fas fa-shopping-bag"></i>
+        <span class="cart-count">0</span>
+      </a>
+    </div>
+  </div>
+</div>
+</header>
+
+<!-- Mobile Navigation -->
+<div class="mobile-nav" id="mobile-nav">
+<ul>
+  <li><a href="index.html">Home</a></li>
+  <li><a href="about.html" class="active">About</a></li>
+  <li><a href="products.html">Products</a></li>
+  <li><a href="blog.html">Blog</a></li>
+  <li><a href="contact.html">Contact</a></li>
+</ul>
+</div>
+
+<!-- Search Overlay -->
+<div class="search-overlay" id="search-overlay">
+<div class="search-container">
+  <form class="search-form">
+    <input type="text" placeholder="Search for products..." id="search-input">
+    <button type="submit"><i class="fas fa-search"></i></button>
+  </form>
+  <button class="close-search" id="close-search"><i class="fas fa-times"></i></button>
+</div>
+</div>
+
+<!-- Cart Sidebar -->
+<div class="cart-sidebar" id="cart-sidebar">
+  <div class="cart-header">
+    <h3>Your Cart</h3>
+    <button class="close-cart" id="close-cart"><i class="fas fa-times"></i></button>
+  </div>
+  <div class="cart-items" id="cart-items">
+    <!-- Cart items will be dynamically added here -->
+  </div>
+  <div class="cart-footer">
+    <div class="cart-total">
+      <span>Total:</span>
+      <span id="cart-total">₱0.00</span>
+    </div>
+    <button class="btn btn-primary btn-full">Checkout</button>
+  </div>
+</div>
+
+<!-- Hero Section -->
+<section class="hero hero-small">
+  <div class="hero-bg">
+    <div class="bubble bubble-1"></div>
+    <div class="bubble bubble-2"></div>
+    <div class="bubble bubble-3"></div>
+  </div>
+  <div class="container">
+    <div class="hero-content fade-in">
+      <h1>Our <span class="pink">Bubble</span> Story</h1>
+      <p>Creating joyful, cute, and energetic makeup for everyone since 2018.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Our Story -->
+<section class="story-section">
+  <div class="container">
+    <div class="story-grid">
+      <div class="story-image slide-in-left">
+        <img src="images/about/founder.jpg" alt="Bubble Cosmetics Founder">
+      </div>
+      <div class="story-content slide-in-right">
+        <h2>How It All Started</h2>
+        <p>
+          Bubble Cosmetics was born from a simple idea: makeup should be fun, expressive, and accessible to
+          everyone. Our founder, Emma Chen, was frustrated with the serious, exclusive nature of the beauty
+          industry.
+        </p>
+        <p>
+          In 2018, Emma started creating vibrant, playful cosmetics in her apartment kitchen in Manila. She wanted to create
+          products that would bring joy to people's daily routines and help them express their unique
+          personalities.
+        </p>
+        <p>
+          What began as a small passion project quickly grew into a beloved brand known for its joyful approach to
+          beauty, cute packaging, and high-quality formulations that work for everyone.
+        </p>
+        <p>
+          Today, Bubble Cosmetics continues to spread joy and confidence through our products, staying true to our
+          mission of making beauty fun and accessible for all.
+        </p>
+        <a href="#team" class="btn btn-primary">Meet Our Team</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Mission, Vision, Values -->
+<section class="mission-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Our Mission, Vision & Values</h2>
+      <p>The principles that guide everything we do at Bubble Cosmetics.</p>
+    </div>
+    
+    <div class="mission-grid">
+      <div class="mission-card" data-aos="fade-up">
+        <div class="mission-icon">
+          <i class="fas fa-heart"></i>
+        </div>
+        <h3>Our Mission</h3>
+        <p>
+          To create joyful, high-quality cosmetics that empower people to express themselves freely and
+          confidently.
+        </p>
+      </div>
+
+      <div class="mission-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="mission-icon">
+          <i class="fas fa-award"></i>
+        </div>
+        <h3>Our Vision</h3>
+        <p>
+          A world where beauty is a source of joy, self-expression, and confidence for everyone, regardless of
+          age, gender, or background.
+        </p>
+      </div>
+
+      <div class="mission-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="mission-icon">
+          <i class="fas fa-smile"></i>
+        </div>
+        <h3>Our Values</h3>
+        <p>
+          Joy, inclusivity, creativity, quality, and sustainability guide every decision we make at Bubble
+          Cosmetics.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Core Values -->
+<section class="values-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Our Core Values</h2>
+      <p>The principles that guide everything we do at Bubble Cosmetics.</p>
+    </div>
+    
+    <div class="values-grid">
+      <div class="value-card" data-aos="fade-up">
+        <div class="value-icon">
+          <i class="fas fa-smile"></i>
+        </div>
+        <div class="value-content">
+          <h3>Joy</h3>
+          <p>
+            We believe makeup should bring happiness to your daily routine. Our products are designed to make you smile.
+          </p>
+        </div>
+      </div>
+
+      <div class="value-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="value-icon">
+          <i class="fas fa-users"></i>
+        </div>
+        <div class="value-content">
+          <h3>Inclusivity</h3>
+          <p>
+            Beauty is for everyone. We create products that work for all skin tones, types, and genders.
+          </p>
+        </div>
+      </div>
+
+      <div class="value-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="value-icon">
+          <i class="fas fa-heart"></i>
+        </div>
+        <div class="value-content">
+          <h3>Creativity</h3>
+          <p>
+            We encourage self-expression and experimentation. Our products are your tools for creative expression.
+          </p>
+        </div>
+      </div>
+
+      <div class="value-card" data-aos="fade-up" data-aos-delay="300">
+        <div class="value-icon">
+          <i class="fas fa-award"></i>
+        </div>
+        <div class="value-content">
+          <h3>Quality</h3>
+          <p>
+            We never compromise on quality. Our products are formulated with the best ingredients for optimal performance.
+          </p>
+        </div>
+      </div>
+
+      <div class="value-card" data-aos="fade-up" data-aos-delay="400">
+        <div class="value-icon">
+          <i class="fas fa-leaf"></i>
+        </div>
+        <div class="value-content">
+          <h3>Sustainability</h3>
+          <p>
+            We're committed to reducing our environmental impact through sustainable practices and packaging.
+          </p>
+        </div>
+      </div>
+
+      <div class="value-card" data-aos="fade-up" data-aos-delay="500">
+        <div class="value-icon">
+          <i class="fas fa-shield-alt"></i>
+        </div>
+        <div class="value-content">
+          <h3>Transparency</h3>
+          <p>
+            We believe in being honest about our ingredients, processes, and business practices.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Team Section -->
+<section class="team-section" id="team">
+  <div class="container">
+    <div class="section-header">
+      <h2>Meet Our Team</h2>
+      <p>The passionate people behind Bubble Cosmetics.</p>
+    </div>
+    
+    <div class="team-grid">
+      <div class="team-card" data-aos="fade-up">
+        <div class="team-image">
+          <img src="images/team/emma.jpg" alt="Emma Chen">
+        </div>
+        <h3>Emma Chen</h3>
+        <p class="team-position">Founder & CEO</p>
+        <p class="team-bio">
+          Emma founded Bubble Cosmetics with a vision to make makeup fun and accessible for everyone.
+        </p>
+      </div>
+
+      <div class="team-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="team-image">
+          <img src="images/team/kim.jpg" alt="Sarah Kim">
+        </div>
+        <h3>Sarah Kim</h3>
+        <p class="team-position">Head of Product Development</p>
+        <p class="team-bio">
+          Sarah leads our innovative product development team, creating formulas that perform and delight.
+        </p>
+      </div>
+
+      <div class="team-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="team-image">
+          <img src="images/team/michael.jpg" alt="Michael Johnson">
+        </div>
+        <h3>Michael Johnson</h3>
+        <p class="team-position">Marketing Director</p>
+        <p class="team-bio">
+          Michael brings our brand to life through creative campaigns that capture our joyful spirit.
+        </p>
+      </div>
+
+      <div class="team-card" data-aos="fade-up" data-aos-delay="300">
+        <div class="team-image">
+          <img src="images/team/david.jpg" alt="David Rodriguez">
+        </div>
+        <h3>David Rodriguez</h3>
+        <p class="team-position">Operations Manager</p>
+        <p class="team-bio">
+          David ensures our products are made sustainably and reach our customers efficiently.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Organization Structure -->
+<section class="org-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Our Organization</h2>
+      <p>How we work together to bring joy to our customers.</p>
+    </div>
+    
+    <div class="org-chart">
+      <div class="org-ceo">
+        <h3>CEO & Founder</h3>
+        <p>Emma Chen</p>
+      </div>
+      
+      <div class="org-directors">
+        <div class="org-director">
+          <h3>Product Development</h3>
+          <p>Sarah Kim</p>
+        </div>
+        <div class="org-director">
+          <h3>Marketing & Sales</h3>
+          <p>Michael Johnson</p>
+        </div>
+        <div class="org-director">
+          <h3>Operations</h3>
+          <p>David Rodriguez</p>
+        </div>
+      </div>
+      
+      <div class="org-teams">
+        <div class="org-team">
+          <h3>R&D Team</h3>
+        </div>
+        <div class="org-team">
+          <h3>Digital Marketing</h3>
+        </div>
+        <div class="org-team">
+          <h3>Supply Chain</h3>
+        </div>
+        <div class="org-team">
+          <h3>Customer Service</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Company Policies -->
+<section class="policies-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Our Policies</h2>
+      <p>The standards we uphold in our business practices.</p>
+    </div>
+    
+    <div class="policies-grid">
+      <div class="policy-card slide-in-left">
+        <h3>Sustainability Commitment</h3>
+        <p>
+          At Bubble Cosmetics, we're committed to reducing our environmental impact. We use recyclable packaging,
+          sustainably sourced ingredients, and continuously work to minimize waste in our production process.
+        </p>
+        <p>
+          Our goal is to be carbon neutral by 2025, and we're investing in renewable energy and offset programs to
+          achieve this target.
+        </p>
+      </div>
+
+      <div class="policy-card slide-in-right">
+        <h3>Ethical Standards</h3>
+        <p>
+          We believe in ethical business practices at every level. This includes fair wages for all employees,
+          transparent supply chains, and cruelty-free product development.
+        </p>
+        <p>
+          We never test on animals and work only with suppliers who share our commitment to ethical practices and
+          human rights.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Join Our Team -->
+<section class="careers-section">
+  <div class="container">
+    <div class="careers-content">
+      <div class="careers-info">
+        <h2>Join Our Bubble Team</h2>
+        <p>
+          We're always looking for passionate, creative people to join our growing team. If you love makeup,
+          innovation, and spreading joy, we want to hear from you!
+        </p>
+        <a href="careers.html" class="btn btn-white">View Open Positions</a>
+      </div>
+      <div class="careers-image">
+        <img src="images/about/team-photo.jpg" alt="Bubble Cosmetics Team" style="margin-top: 20px;">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Newsletter -->
+<section class="newsletter">
+  <div class="container">
+    <div class="newsletter-content">
+      <h2>Join Our Bubble Family</h2>
+      <p>Subscribe to our newsletter for exclusive offers, tutorials, and beauty tips.</p>
+      
+      <form class="newsletter-form">
+        <input type="email" placeholder="Your email address" required>
+        <button type="submit" class="btn btn-accent">Subscribe</button>
+      </form>
+      
+      <p class="newsletter-terms">
+        By subscribing, you agree to our Privacy Policy and consent to receive updates from our company.
+      </p>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h3>Bubble Cosmetics</h3>
+        <p>Joyful, cute, and energetic makeup for everyone.</p>
+        <div class="social-links">
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h3>Shop</h3>
+        <ul>
+          <li><a href="products.html">All Products</a></li>
+          <li><a href="products.html?category=bestsellers">Bestsellers</a></li>
+          <li><a href="products.html?category=new">New Arrivals</a></li>
+          <li><a href="products.html?category=offers">Special Offers</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="press.html">Press</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Customer Service</h3>
+        <ul>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="faqs.html">FAQs</a></li>
+          <li><a href="shipping-returns.html">Shipping & Returns</a></li>
+          <li><a href="#" class="privacy-policy-link">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; <span id="current-year"></span> Bubble Cosmetics. All rights reserved.</p>
+      <p class="footer-address">123 Bubble Street, Makati City, Philippines</p>
+    </div>
+  </div>
+</footer>
+<div id="privacy-policy-modal" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2>Privacy Policy</h2>
+      <span class="close-modal">&times;</span>
+    </div>
+    <div class="modal-body">
+      <p class="modal-date">Last updated: May 19, 2025</p>
+      
+      <section class="policy-section">
+        <h3>1. Introduction</h3>
+        <p>
+          At Bubble Cosmetics, we respect your privacy and are committed to protecting your personal data. This
+          privacy policy will inform you about how we look after your personal data when you visit our website and
+          tell you about your privacy rights and how the law protects you.
+        </p>
+      </section>
+
+      <section class="policy-section">
+        <h3>2. The Data We Collect About You</h3>
+        <p>
+          Personal data means any information about an individual from which that person can be identified. We may
+          collect, use, store and transfer different kinds of personal data about you which we have grouped together
+          as follows:
+        </p>
+        <ul>
+          <li>Identity Data includes first name, last name, username or similar identifier.</li>
+          <li>Contact Data includes billing address, delivery address, email address and telephone numbers.</li>
+          <li>Financial Data includes payment card details.</li>
+          <li>Transaction Data includes details about payments to and from you and other details of products you have
+            purchased from us.</li>
+          <li>Technical Data includes internet protocol (IP) address, your login data, browser type and version.</li>
+          <li>Profile Data includes your username and password, purchases or orders made by you, your preferences.</li>
+          <li>Usage Data includes information about how you use our website and products.</li>
+          <li>Marketing and Communications Data includes your preferences in receiving marketing from us.</li>
+        </ul>
+      </section>
+
+      <section class="policy-section">
+        <h3>3. How We Use Your Personal Data</h3>
+        <p>
+          We will only use your personal data when the law allows us to. Most commonly, we will use your personal
+          data in the following circumstances:
+        </p>
+        <ul>
+          <li>Where we need to perform the contract we are about to enter into or have entered into with you.</li>
+          <li>Where it is necessary for our legitimate interests and your interests and fundamental rights do not
+            override those interests.</li>
+          <li>Where we need to comply with a legal or regulatory obligation.</li>
+        </ul>
+      </section>
+
+      <section class="policy-section">
+        <h3>4. Data Security</h3>
+        <p>
+          We have put in place appropriate security measures to prevent your personal data from being accidentally
+          lost, used or accessed in an unauthorized way, altered or disclosed. In addition, we limit access to your
+          personal data to those employees, agents, contractors and other third parties who have a business need to
+          know.
+        </p>
+      </section>
+
+      <section class="policy-section">
+        <h3>5. Your Legal Rights</h3>
+        <p>
+          Under certain circumstances, you have rights under data protection laws in relation to your personal data,
+          including:
+        </p>
+        <ul>
+          <li>Request access to your personal data.</li>
+          <li>Request correction of your personal data.</li>
+          <li>Request erasure of your personal data.</li>
+          <li>Object to processing of your personal data.</li>
+          <li>Request restriction of processing your personal data.</li>
+          <li>Request transfer of your personal data.</li>
+          <li>Right to withdraw consent.</li>
+        </ul>
+      </section>
+
+      <section class="policy-section">
+        <h3>6. Contact Us</h3>
+        <p>If you have any questions about this privacy policy or our privacy practices, please contact us at:</p>
+        <p>
+          <strong>Email:</strong> privacy@bubblecosmetics.com<br>
+          <strong>Phone:</strong> +63 (2) 8123-4567<br>
+          <strong>Address:</strong> 123 Bubble Street, Makati City, Philippines
+        </p>
+      </section>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-primary" id="close-privacy-policy">I Understand</button>
+    </div>
+  </div>
+</div>
+
+<button class="go-to-top-float" id="goToTopFloatBtn" aria-label="Go to top">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+<script src="js/script.js"></script>
+<script src="js/footer.js"></script>
+<script src="js/products.js"></script>
+<script src="js/cart.js"></script>
+</body>
+</html>
